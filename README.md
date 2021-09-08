@@ -44,7 +44,12 @@ In _phase2/1.nonvariable_filter.r_ I identified which sites were non-variable ac
 I then attempted to identify sites with lower coverage (_scripts/phase2/2.coverage_filter.r_). These sites show fewer total counts and calculating the proportion of modifications for these sites might not be reliable. I kept sites that have at least 10 total counts in at least 2 samples per group (north and south). 154 sites were removed. The resulting filtered dataset can be found in _data/alien_proportionA_filter10cov.csv_.
 
 Finally I performed the linear regression again on the filtered selection of sites (_scripts/phase2/3.linear_regression_filtered.r_) and re-did the qq-plot (script: _scripts/phase2/4.qq_plots.r_; plot: _plots/qq_linear_regression_filtered10cov.pdf_). 
-The results of the linear regression can be seen in 
+The results of the linear regression can be seen in _results/alien_linear_regression_filtered10cov.xlsx_.
+Removing lowly covered sites did not improve the FDR corrected p-values enough to identify any statistical significant sites.
+
+I added a script to plot the boxplots + scatter plots of the top most significant sites (_scripts/phase2/5.boxplots.r_).
+
+The plots for the sites with pvalue < 0.01 can be observed in _results/boxplots_linear_regression_filtered10cov.pdf_. 
 
 
 
